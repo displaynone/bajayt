@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0.0
+Name=Baja YT
+GenericName=bajayt
+Comment=Search and download YouTube videos or audios.
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=Flutter;
+Icon=bajayt
