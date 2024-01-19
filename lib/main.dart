@@ -4,9 +4,9 @@ import 'package:bajayt/redux/redurecrs.dart';
 import 'package:bajayt/src/views/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-// import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 import 'package:youtube_explode_dart/youtube_explode_dart.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() {
   runApp(App());
@@ -50,6 +50,9 @@ class App extends StatelessWidget {
             primarySwatch: Colors.green,
             fontFamily: 'Inter',
           ),
+          locale: const Locale('pt', ''),
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
           home: const HomePage(title: 'Baja YouTube'),
         ));
   }

@@ -1,0 +1,8 @@
+{
+  "@@locale": "en",
+  "search": "Search...",
+  "chooseTitle": "Download {title}",
+  "chooseFormat": "Select the format you want to download",
+  "download": "Download",
+  "cancel": "Cancel"
+}
