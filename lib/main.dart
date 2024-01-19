@@ -50,7 +50,7 @@ class App extends StatelessWidget {
             primarySwatch: Colors.green,
             fontFamily: 'Inter',
           ),
-          locale: const Locale('pt', ''),
+          // locale: const Locale('pt', ''),
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
           home: const HomePage(title: 'Baja YouTube'),
