@@ -1,0 +1,8 @@
+{
+  "@@locale": "ja",
+  "search": "検索...",
+  "chooseTitle": "{title} をダウンロード",
+  "chooseFormat": "ダウンロードする形式を選択してください",
+  "download": "ダウンロード",
+  "cancel": "キャンセル"
+}

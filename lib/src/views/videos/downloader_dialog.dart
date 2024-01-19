@@ -5,6 +5,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:redux/redux.dart';
 import 'package:youtube_explode_dart/youtube_explode_dart.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DownloaderDialogItem {
   bool isSelected;
@@ -48,7 +49,8 @@ class _DownloaderDialogState extends State<DownloaderDialog> {
   Widget build(BuildContext context) {
     return SimpleDialog(
       shape: const RoundedRectangleBorder(),
-      title: Text('Descarga ${widget.title}', maxLines: 2),
+      title: Text(AppLocalizations.of(context)!.chooseTitle(widget.title),
+          maxLines: 2),
       children: <Widget>[
         Container(
             padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -56,8 +58,8 @@ class _DownloaderDialogState extends State<DownloaderDialog> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  const Text(
-                    'Selecciona los formatos que deseas descargar',
+                  Text(
+                    AppLocalizations.of(context)!.chooseFormat,
                     textAlign: TextAlign.left,
                   ),
                   const SizedBox(height: 16),
@@ -93,8 +95,9 @@ class _DownloaderDialogState extends State<DownloaderDialog> {
                               style: ButtonStyle(
                                   backgroundColor: MaterialStateProperty.all(
                                       const Color(0xFF5C94B3))),
-                              child: const Text('Descargar',
-                                  style: TextStyle(color: Colors.white)),
+                              child: Text(
+                                  AppLocalizations.of(context)!.download,
+                                  style: const TextStyle(color: Colors.white)),
                               onPressed: () {
                                 isSelected
                                     .where((element) => element.isSelected)
@@ -121,8 +124,8 @@ class _DownloaderDialogState extends State<DownloaderDialog> {
                               style: ButtonStyle(
                                   backgroundColor:
                                       MaterialStateProperty.all(Colors.white)),
-                              child: const Text('Cancelar',
-                                  style: TextStyle(
+                              child: Text(AppLocalizations.of(context)!.cancel,
+                                  style: const TextStyle(
                                     color: Color(0xFF152135),
                                   )),
                               onPressed: () {

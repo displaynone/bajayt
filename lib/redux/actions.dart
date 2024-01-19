@@ -76,7 +76,7 @@ Future<void> downloadVideo(
     String command = 'ffmpeg -i "$filePath" -vn "$filePath.mp3"';
     List<ProcessResult> result = await pr.run(command, verbose: true);
     if (result[0].exitCode != 0) {
-      throw 'Error en la conversión: ${result[0].stderr}';
+      throw 'Conversion error: ${result[0].stderr}';
     }
   }
 }
