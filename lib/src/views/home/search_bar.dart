@@ -2,6 +2,7 @@ import 'package:bajayt/redux/actions.dart';
 import 'package:bajayt/redux/app_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SearchBarWidget extends StatefulWidget {
   const SearchBarWidget({super.key});
@@ -42,8 +43,8 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                         converter: (store) => store.state,
                         builder: (context, count) {
                           return TextField(
-                            decoration: const InputDecoration(
-                              hintText: 'Buscar...',
+                            decoration: InputDecoration(
+                              hintText: AppLocalizations.of(context)!.search,
                               border: InputBorder.none,
                               contentPadding: EdgeInsets.only(left: 10),
                             ),

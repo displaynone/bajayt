@@ -1,0 +1,8 @@
+{
+  "@@locale": "de",
+  "search": "Suchen...",
+  "chooseTitle": "Lade {title} herunter",
+  "chooseFormat": "Wähle die Formate aus, die du herunterladen möchtest",
+  "download": "Herunterladen",
+  "cancel": "Abbrechen"
+}
